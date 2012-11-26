@@ -58,6 +58,11 @@ static Logger *_DDNSLogger_logger = nil;
 	return self;
 }
 
+- (void)setupWithBonjourServiceName:(NSString *)serviceName
+{
+    LoggerSetupBonjour(_DDNSLogger_logger, NULL, (CFStringRef)serviceName);
+}
+
 - (void)logMessage:(DDLogMessage *)logMessage
 {
 	NSString *logMsg = logMessage->logMsg;
