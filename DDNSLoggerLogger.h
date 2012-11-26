@@ -12,6 +12,8 @@
 
 + (DDNSLoggerLogger *)sharedInstance;
 
+- (void)setupWithBonjourServiceName:(NSString *)serviceName;
+
 // Inherited from DDAbstractLogger
 
 // - (id <DDLogFormatter>)logFormatter;
